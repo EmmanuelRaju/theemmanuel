@@ -1,0 +1,161 @@
+@import 'tailwindcss';
+
+@theme {
+	/* Color Variables */
+	--color-background-light: oklch(98% 0.02 240);
+	--color-foreground-light: oklch(15% 0.02 240);
+
+	--color-primary-light: oklch(62% 0.25 280);
+	--color-primary-foreground-light: oklch(98% 0.02 240);
+
+	--color-secondary-light: oklch(20% 0.05 240);
+	--color-secondary-foreground-light: oklch(98% 0.02 240);
+
+	--color-muted-light: oklch(90% 0.02 240);
+	--color-muted-foreground-light: oklch(50% 0.02 240);
+
+	--color-accent-light: oklch(60% 0.2 25);
+	--color-accent-foreground-light: oklch(98% 0.02 240);
+
+	--color-card-light: oklch(100% 0 0);
+	--color-card-foreground-light: oklch(15% 0.02 240);
+
+	--color-border-light: oklch(91% 0.02 240);
+	--color-input-light: oklch(91% 0.02 240);
+	--color-ring-light: oklch(62% 0.25 280);
+
+	/* Dark Mode Colors */
+	--color-background-dark: oklch(10% 0.02 240);
+	--color-foreground-dark: oklch(98% 0.02 240);
+
+	--color-primary-dark: oklch(58% 0.22 280);
+	--color-primary-foreground-dark: oklch(98% 0.02 240);
+
+	--color-secondary-dark: oklch(20% 0.05 240);
+	--color-secondary-foreground-dark: oklch(98% 0.02 240);
+
+	--color-muted-dark: oklch(20% 0.05 240);
+	--color-muted-foreground-dark: oklch(65% 0.02 240);
+
+	--color-accent-dark: oklch(60% 0.2 25);
+	--color-accent-foreground-dark: oklch(15% 0.02 240);
+
+	--color-card-dark: oklch(12% 0.02 240);
+	--color-card-foreground-dark: oklch(98% 0.02 240);
+
+	--color-border-dark: oklch(22% 0.05 240);
+	--color-input-dark: oklch(22% 0.05 240);
+	--color-ring-dark: oklch(58% 0.22 280);
+
+	/* Animations */
+	--animate-accordion-down: accordion-down 0.2s ease-out;
+	--animate-accordion-up: accordion-up 0.2s ease-out;
+	--animate-fade-in-up: fade-in-up 0.5s ease-out forwards;
+	--animate-marquee: marquee 25s linear infinite;
+
+	@keyframes accordion-down {
+		from {
+			height: 0;
+		}
+		to {
+			height: var(--radix-accordion-content-height);
+		}
+	}
+
+	@keyframes accordion-up {
+		from {
+			height: var(--radix-accordion-content-height);
+		}
+		to {
+			height: 0;
+		}
+	}
+
+	@keyframes fade-in-up {
+		0% {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+}
+
+@layer base {
+	:root {
+		--background: var(--color-background-light);
+		--foreground: var(--color-foreground-light);
+		--primary: var(--color-primary-light);
+		--primary-foreground: var(--color-primary-foreground-light);
+		--secondary: var(--color-secondary-light);
+		--secondary-foreground: var(--color-secondary-foreground-light);
+		--muted: var(--color-muted-light);
+		--muted-foreground: var(--color-muted-foreground-light);
+		--accent: var(--color-accent-light);
+		--accent-foreground: var(--color-accent-foreground-light);
+		--card: var(--color-card-light);
+		--card-foreground: var(--color-card-foreground-light);
+		--border: var(--color-border-light);
+		--input: var(--color-input-light);
+		--ring: var(--color-ring-light);
+	}
+
+	.dark {
+		--background: var(--color-background-dark);
+		--foreground: var(--color-foreground-dark);
+		--primary: var(--color-primary-dark);
+		--primary-foreground: var(--color-primary-foreground-dark);
+		--secondary: var(--color-secondary-dark);
+		--secondary-foreground: var(--color-secondary-foreground-dark);
+		--muted: var(--color-muted-dark);
+		--muted-foreground: var(--color-muted-foreground-dark);
+		--accent: var(--color-accent-dark);
+		--accent-foreground: var(--color-accent-foreground-dark);
+		--card: var(--color-card-dark);
+		--card-foreground: var(--color-card-foreground-dark);
+		--border: var(--color-border-dark);
+		--input: var(--color-input-dark);
+		--ring: var(--color-ring-dark);
+	}
+
+	* {
+		border-color: var(--border);
+	}
+
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+		font-family:
+			system-ui,
+			-apple-system,
+			sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	body ::selection {
+		background-color: var(--primary);
+		color: white;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 700;
+		letter-spacing: -0.025em;
+	}
+}
