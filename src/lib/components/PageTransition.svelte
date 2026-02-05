@@ -1,11 +1,11 @@
 <script>
 	import { Motion, AnimatePresence } from 'svelte-motion';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let { children } = $props();
 </script>
 
-<AnimatePresence list={[{ key: $page.url.pathname }]} let:item>
+<AnimatePresence list={[{ key: page.url.pathname }]} let:item>
 	<Motion
 		initial={{ opacity: 0, y: 10 }}
 		animate={{ opacity: 1, y: 0 }}

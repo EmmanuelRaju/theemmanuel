@@ -10,7 +10,8 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/about', label: 'About' },
 		{ href: '/work', label: 'Work' },
-		{ href: '/projects', label: 'Projects' }
+		{ href: '/projects', label: 'Projects' },
+		{ href: '/contact', label: 'Contact' }
 	];
 
 	function toggleMenu() {
@@ -23,8 +24,9 @@
 </script>
 
 <nav class="fixed top-4 right-0 left-0 z-50 mx-auto w-full max-w-4xl px-4">
+	<!-- dark:border-white/5 dark:bg-black/20 -->
 	<div
-		class="relative flex h-14 items-center justify-between rounded-full border border-white/10 bg-white/10 px-6 shadow-lg backdrop-blur-md transition-all dark:border-white/5 dark:bg-black/20"
+		class="relative flex h-14 items-center justify-between rounded-full border border-white/10 bg-white/10 px-6 shadow-lg backdrop-blur-md transition-all"
 	>
 		<!-- Logo -->
 		<a

@@ -1,21 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import 'tailwindcss';
 
 @theme {
-	/* Color Variables */
-	--color-background-light: oklch(98% 0.02 240);
-	--color-foreground-light: oklch(15% 0.02 240);
+	/* Color Variables - Modern Blue/Coral Palette */
+	--color-background-light: oklch(98% 0.002 240);
+	--color-foreground-light: oklch(20% 0.01 240);
 
-	--color-primary-light: oklch(62% 0.25 280);
-	--color-primary-foreground-light: oklch(98% 0.02 240);
+	--color-primary-light: oklch(60% 0.19 230); /* Deep Sky Blue */
+	--color-primary-foreground-light: oklch(98% 0.005 240);
 
-	--color-secondary-light: oklch(20% 0.05 240);
-	--color-secondary-foreground-light: oklch(98% 0.02 240);
+	--color-secondary-light: oklch(24% 0.02 240);
+	--color-secondary-foreground-light: oklch(98% 0.005 240);
 
-	--color-muted-light: oklch(90% 0.02 240);
-	--color-muted-foreground-light: oklch(50% 0.02 240);
+	--color-muted-light: oklch(92% 0.01 240);
+	--color-muted-foreground-light: oklch(55% 0.015 240);
 
-	--color-accent-light: oklch(60% 0.2 25);
-	--color-accent-foreground-light: oklch(98% 0.02 240);
+	--color-accent-light: oklch(68% 0.18 35); /* Warm Coral */
+	--color-accent-foreground-light: oklch(98% 0.005 240);
 
 	--color-card-light: oklch(100% 0 0);
 	--color-card-foreground-light: oklch(15% 0.02 240);
@@ -24,21 +25,21 @@
 	--color-input-light: oklch(91% 0.02 240);
 	--color-ring-light: oklch(62% 0.25 280);
 
-	/* Dark Mode Colors */
-	--color-background-dark: oklch(10% 0.02 240);
-	--color-foreground-dark: oklch(98% 0.02 240);
+	/* Dark Mode Colors - Modern Blue/Coral Palette */
+	--color-background-dark: oklch(12% 0.01 240);
+	--color-foreground-dark: oklch(96% 0.005 240);
 
-	--color-primary-dark: oklch(58% 0.22 280);
-	--color-primary-foreground-dark: oklch(98% 0.02 240);
+	--color-primary-dark: oklch(65% 0.19 230); /* Brighter Sky Blue */
+	--color-primary-foreground-dark: oklch(12% 0.01 240);
 
-	--color-secondary-dark: oklch(20% 0.05 240);
-	--color-secondary-foreground-dark: oklch(98% 0.02 240);
+	--color-secondary-dark: oklch(22% 0.02 240);
+	--color-secondary-foreground-dark: oklch(96% 0.005 240);
 
-	--color-muted-dark: oklch(20% 0.05 240);
-	--color-muted-foreground-dark: oklch(65% 0.02 240);
+	--color-muted-dark: oklch(22% 0.02 240);
+	--color-muted-foreground-dark: oklch(70% 0.015 240);
 
-	--color-accent-dark: oklch(60% 0.2 25);
-	--color-accent-foreground-dark: oklch(15% 0.02 240);
+	--color-accent-dark: oklch(70% 0.18 35); /* Warm Coral */
+	--color-accent-foreground-dark: oklch(12% 0.01 240);
 
 	--color-card-dark: oklch(12% 0.02 240);
 	--color-card-foreground-dark: oklch(98% 0.02 240);
@@ -137,11 +138,13 @@
 		background-color: var(--background);
 		color: var(--foreground);
 		font-family:
+			'Roboto',
 			system-ui,
 			-apple-system,
 			sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		font-weight: 500;
 	}
 
 	body ::selection {
@@ -157,5 +160,6 @@
 	h6 {
 		font-weight: 700;
 		letter-spacing: -0.025em;
+		font-family: 'Space Grotesk', sans-serif;
 	}
 }
