@@ -23,15 +23,17 @@
 		<h1 class="text-3xl font-bold tracking-tight md:text-5xl">
 			<span class="text-(--primary)">Purpose-Driven</span> Development
 		</h1>
-		<div class="prose prose-lg max-w-none space-y-4 text-base leading-relaxed text-(--muted-foreground) md:text-lg">
+		<div
+			class="prose prose-lg max-w-none space-y-4 text-base leading-relaxed text-(--muted-foreground) md:text-lg"
+		>
 			<p>
-				I believe the work we do can outlive us. That's why I love partnering on projects that
-				make a positive difference. My motivation comes from one of my favorite verses: <span
+				I believe the work we do can outlive us. That's why I love partnering on projects that make
+				a positive difference. My motivation comes from one of my favorite verses: <span
 					class="font-semibold text-(--foreground)"
 					>"Whatever you do, work at it with all your heart, as working for the LORD."</span
 				>
-				This isn't just philosophy—it shapes how I approach every line of code, every architecture
-				decision, and every collaboration.
+				This isn't just philosophy—it shapes how I approach every line of code, every architecture decision,
+				and every collaboration.
 			</p>
 			<p>
 				I'm Emmanuel Raju, a Senior Frontend Developer based in Hyderabad with 3+ years of building
@@ -53,7 +55,7 @@
 		<div class="grid gap-6 md:grid-cols-3">
 			<!-- Card 1: Purpose-Driven -->
 			<div
-				class="group rounded-2xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all hover:border-(--primary)/50 hover:shadow-xl hover:-translate-y-1"
+				class="group rounded-2xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-(--primary)/50 hover:shadow-xl"
 			>
 				<div
 					class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-(--primary)/10 text-(--primary) transition-transform group-hover:scale-110"
@@ -70,7 +72,7 @@
 
 			<!-- Card 2: Partnership Mindset -->
 			<div
-				class="group rounded-2xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all hover:border-(--accent)/50 hover:shadow-xl hover:-translate-y-1"
+				class="group rounded-2xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-(--accent)/50 hover:shadow-xl"
 			>
 				<div
 					class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-(--accent)/10 text-(--accent) transition-transform group-hover:scale-110"
@@ -79,15 +81,15 @@
 				</div>
 				<h3 class="mb-3 text-xl font-semibold">Partnership Mindset</h3>
 				<p class="text-sm leading-relaxed text-(--muted-foreground)">
-					I don't just deliver code and move on. I collaborate deeply, communicate clearly, and
-					stay invested in the long-term success of your project. Your wins are my wins, and I
-					approach every engagement as a true partnership.
+					I don't just deliver code and move on. I collaborate deeply, communicate clearly, and stay
+					invested in the long-term success of your project. Your wins are my wins, and I approach
+					every engagement as a true partnership.
 				</p>
 			</div>
 
 			<!-- Card 3: Continuous Growth -->
 			<div
-				class="group rounded-2xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all hover:border-(--primary)/50 hover:shadow-xl hover:-translate-y-1"
+				class="group rounded-2xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-(--primary)/50 hover:shadow-xl"
 			>
 				<div
 					class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-(--primary)/10 text-(--primary) transition-transform group-hover:scale-110"
@@ -136,7 +138,7 @@
 	<!-- What I Bring -->
 	<section class="space-y-6">
 		<h2 class="text-2xl font-bold">What I Bring to Your Team</h2>
-		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 			<!-- Frontend Excellence -->
 			<div class="space-y-3">
 				<div class="flex items-center gap-2">
@@ -202,12 +204,10 @@
 	<!-- CTA -->
 	<section class="text-center">
 		<div class="inline-flex flex-col items-center gap-4">
-			<p class="text-lg text-(--muted-foreground)">
-				Ready to build something meaningful together?
-			</p>
+			<p class="text-lg text-(--muted-foreground)">Ready to build something meaningful together?</p>
 			<a
 				href="/contact"
-				class="inline-flex h-12 items-center justify-center rounded-full bg-(--accent) px-8 text-sm font-medium text-(--accent-foreground) shadow transition-all hover:opacity-90 hover:scale-105 focus:ring-2 focus:ring-(--ring) focus:outline-none"
+				class="inline-flex h-12 items-center justify-center rounded-full bg-(--accent) px-8 text-sm font-medium text-(--accent-foreground) shadow transition-all hover:scale-105 hover:opacity-90 focus:ring-2 focus:ring-(--ring) focus:outline-none"
 			>
 				Let's Connect
 			</a>

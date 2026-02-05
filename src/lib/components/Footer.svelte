@@ -10,7 +10,7 @@
 
 		<div class="flex items-center gap-6">
 			<a
-				href="https://github.com/your-github-username"
+				href="https://github.com/EmmanuelRaju"
 				target="_blank"
 				rel="noreferrer"
 				class="text-(--muted-foreground) transition-colors hover:text-(--primary)"
@@ -29,7 +29,7 @@
 				<Linkedin size={20} />
 			</a>
 			<a
-				href="mailto:your-email@example.com"
+				href="mailto:eraj007@gmail.com"
 				class="text-(--muted-foreground) transition-colors hover:text-(--primary)"
 				aria-label="Email"
 			>

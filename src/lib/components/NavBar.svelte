@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ThemeToggle from './ThemeToggle.svelte';
-	import { page } from '$app/stores';
+	import ThemeSelector from './ThemeSelector.svelte';
+	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
 	import { fly } from 'svelte/transition';
 
@@ -41,8 +41,8 @@
 			{#each links as link}
 				<a
 					href={link.href}
-					class="text-sm font-medium transition-colors hover:text-(--primary) {$page.url
-						.pathname === link.href
+					class="text-sm font-medium transition-colors hover:text-(--primary) {page.url.pathname ===
+					link.href
 						? 'text-(--primary)'
 						: 'text-(--muted-foreground)'}"
 				>
@@ -53,7 +53,7 @@
 
 		<!-- Actions -->
 		<div class="flex items-center gap-3">
-			<ThemeToggle />
+			<ThemeSelector />
 
 			<!-- Mobile Menu Button -->
 			<button

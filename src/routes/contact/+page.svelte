@@ -10,23 +10,23 @@
 		{
 			icon: Mail,
 			label: 'Email',
-			value: 'your-email@example.com', // PLACEHOLDER: Add your real email
-			href: 'mailto:your-email@example.com', // PLACEHOLDER: Add your real email
-			description: 'Send me an email',
-			primary: true
+			value: 'eraj007@gmail.com',
+			href: 'mailto:eraj007@gmail.com',
+			description: 'Send me an email'
 		},
 		{
 			icon: Linkedin,
 			label: 'LinkedIn',
-			value: 'emmanuel-raju',
+			value: 'Emmanuel Raju',
 			href: 'https://linkedin.com/in/emmanuel-raju',
-			description: 'Connect professionally'
+			description: 'Connect professionally',
+			primary: true
 		},
 		{
 			icon: Github,
 			label: 'GitHub',
-			value: 'your-github-username', // PLACEHOLDER: Add your GitHub username
-			href: 'https://github.com/your-github-username', // PLACEHOLDER: Add your GitHub URL
+			value: 'EmmanuelRaju',
+			href: 'https://github.com/EmmanuelRaju',
 			description: 'Check out my code'
 		}
 		// OPTIONAL: Uncomment if you have a Calendly link
@@ -172,7 +172,7 @@
 			</p>
 			<div class="pt-4">
 				<a
-					href="mailto:your-email@example.com"
+					href="mailto:eraj007@gmail.com"
 					class="inline-flex h-12 items-center justify-center rounded-full bg-(--accent) px-8 text-sm font-medium text-(--accent-foreground) shadow transition-all hover:scale-105 hover:opacity-90 focus:ring-2 focus:ring-(--ring) focus:outline-none"
 				>
 					<Mail size={16} class="mr-2" />
