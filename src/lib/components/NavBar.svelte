@@ -2,7 +2,7 @@
 	import ThemeSelector from './ThemeSelector.svelte';
 	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import Logo from '$lib/assets/logo.svg.svelte';
 
 	let isOpen = $state(false);
@@ -33,6 +33,7 @@
 		<a
 			href="/"
 			class="text-lg font-bold tracking-tight text-(--foreground) transition-colors hover:text-(--primary)"
+			aria-label="Back to home"
 		>
 			<Logo></Logo>
 		</a>
@@ -71,11 +72,21 @@
 		</div>
 	</div>
 
+	<!-- Mobile Menu Backdrop -->
+	{#if isOpen}
+		<button
+			transition:fade={{ duration: 200 }}
+			onclick={closeMenu}
+			class="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm md:hidden"
+			aria-label="Close menu"
+		></button>
+	{/if}
+
 	<!-- Mobile Menu Overlay -->
 	{#if isOpen}
 		<div
 			transition:fly={{ y: -20, duration: 300 }}
-			class="absolute top-20 right-4 left-4 flex flex-col gap-4 rounded-2xl border border-white/10 bg-(--background)/95 p-6 shadow-2xl backdrop-blur-xl md:hidden"
+			class="absolute top-20 right-4 left-4 z-50 flex flex-col gap-4 rounded-2xl border border-white/10 bg-(--background)/95 p-6 shadow-2xl backdrop-blur-xl md:hidden"
 		>
 			{#each links as link}
 				<a

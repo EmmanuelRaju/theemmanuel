@@ -5,7 +5,7 @@
 <footer class="mt-auto border-t border-(--border) bg-(--card)/50 py-8 backdrop-blur-sm">
 	<div class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-4 md:flex-row">
 		<p class="text-sm text-(--muted-foreground)">
-			&copy; {new Date().getFullYear()} Emmanuel Raju. Built with Svelte 5 & Tailwind CSS.
+			&copy; {new Date().getFullYear()} Emmanuel Raju. Built with SvelteKit & Tailwind CSS.
 		</p>
 
 		<div class="flex items-center gap-6">
