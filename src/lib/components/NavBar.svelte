@@ -3,14 +3,15 @@
 	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
 	import { fly } from 'svelte/transition';
+	import Logo from '$lib/assets/logo.svg.svelte';
 
 	let isOpen = $state(false);
 
 	const links = [
 		{ href: '/', label: 'Home' },
 		{ href: '/about', label: 'About' },
+		{ href: '/journey', label: 'Journey' },
 		{ href: '/work', label: 'Work' },
-		{ href: '/projects', label: 'Projects' },
 		{ href: '/contact', label: 'Contact' }
 	];
 
@@ -33,7 +34,7 @@
 			href="/"
 			class="text-lg font-bold tracking-tight text-(--foreground) transition-colors hover:text-(--primary)"
 		>
-			ER<span class="text-(--primary)">.</span>
+			<Logo></Logo>
 		</a>
 
 		<!-- Desktop Links -->

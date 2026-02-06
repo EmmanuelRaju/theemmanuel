@@ -1,27 +1,65 @@
 <script lang="ts">
-	import { Briefcase, Calendar } from 'lucide-svelte';
+	import { ExternalLink, Github, Layers } from 'lucide-svelte';
 
 	// SEO
-	const title = 'Work Experience - Emmanuel Raju';
+	const title = 'Projects - Emmanuel Raju';
 	const description =
-		'Professional journey of Emmanuel Raju - Leading frontend development at Able.do and building scalable systems for enterprise clients.';
+		'Selected works including SDKs, platforms, and developer tools built with React, SvelteKit, and modern JavaScript.';
 
-	const experiences = [
+	const projects = [
 		{
-			company: 'Able.do',
-			role: 'Senior Web Developer (Lead)',
-			period: 'Dec 2022 - Present',
+			title: 'Apex Subscriptions SDK',
+			tagline: 'Headless Account Management',
 			description:
-				'Leading frontend architecture for a headless commerce platform. Partnering with the team to build scalable account management systems, component libraries, and developer-focused SDKs. Orchestrating complex state management and creating tools that empower other developers to ship faster.',
-			stack: ['SvelteKit', 'TypeScript', 'TailwindCSS', 'Headless CMS', 'Component Architecture']
+				'Architected and implemented a headless subscription management system that cleanly separates frontend concerns from complex backend logic. Designed for flexibility and scale, enabling teams to build custom account experiences while the SDK handles the heavy lifting of subscription state, validation, and sync.',
+			impact: '', // PLACEHOLDER: Add metrics like "Reduced integration time by 60%"
+			tags: ['SvelteKit', 'TypeScript', 'Headless CMS', 'Architecture'],
+			links: [] // PLACEHOLDER: Add GitHub or case study links
 		},
 		{
-			company: 'Tech Mahindra',
-			role: 'Associate Software Engineer',
-			period: 'Jul 2018 - Jan 2022',
+			title: 'BRICKS UI',
+			tagline: 'Component Library & Design System',
 			description:
-				'Developed full-stack applications for enterprise clients, contributing to core business logic and UI implementation. Built scalable solutions using modern JavaScript frameworks, collaborated with cross-functional teams, and delivered features that improved user workflows and system performance.',
-			stack: ['React', 'Node.js', 'Express', 'MongoDB', 'REST APIs']
+				'Built a custom component library from the ground up for internal use across multiple client projects. Prioritizes accessibility, theming flexibility, and composability—empowering developers to build consistent, high-quality interfaces faster. Includes comprehensive documentation and Storybook integration.',
+			impact: '', // PLACEHOLDER: e.g., "Used across 5+ production apps"
+			tags: ['Svelte', 'TailwindCSS', 'Design System', 'Accessibility'],
+			links: []
+		},
+		{
+			title: 'ISHRAFF',
+			tagline: 'Task Management for Field Teams',
+			description:
+				'Developed an image-based task management Progressive Web App tailored for blue-collar workforce efficiency. Supports offline mode, real-time sync, and intuitive workflows that work even in low-connectivity environments. Built to solve real communication gaps in field operations.',
+			impact: '', // PLACEHOLDER: e.g., "Improved task completion tracking by 70%"
+			tags: ['Node.js', 'SvelteKit', 'PostgreSQL', 'PWA', 'Offline-First'],
+			links: []
+		},
+		{
+			title: 'Ellipsis',
+			tagline: 'Headless Shopping Cart SDK',
+			description:
+				'Engineered robust shopping cart logic that abstracts away complex validation, inventory checks, and state management. Achieved 90%+ test coverage through comprehensive Jest testing. Designed for e-commerce teams who need reliable cart functionality without the complexity.',
+			impact: '', // PLACEHOLDER: e.g., "Handles 10,000+ transactions/month"
+			tags: ['Jest', 'Svelte', 'TypeScript', 'Testing', 'E-commerce'],
+			links: []
+		},
+		{
+			title: 'Saut',
+			tagline: 'EdTech for Inclusive Learning',
+			description:
+				'Built a curriculum management platform specifically designed for tracking the progress of differently-abled children. Prioritized accessibility, intuitive navigation, and customizable learning paths—creating a tool that genuinely serves educators and families in the special education space.',
+			impact: '', // PLACEHOLDER: e.g., "Supports 100+ students and educators"
+			tags: ['SvelteKit', 'TypeScript', 'Accessibility', 'EdTech'],
+			links: []
+		},
+		{
+			title: 'eNetra & eFortify',
+			tagline: 'IoT & Health Tech at Scale',
+			description:
+				'Developed smart energy management dashboards and COVID tracking applications deployed across multiple facilities. Combined real-time data visualization with intuitive interfaces, enabling users to make informed decisions quickly. Built for scale and reliability during critical operations.',
+			impact: '', // PLACEHOLDER: e.g., "Tracked 50,000+ screenings"
+			tags: ['IoT', 'Dashboard', 'Data Visualization', 'React'],
+			links: []
 		}
 	];
 </script>
@@ -31,7 +69,7 @@
 	<meta name="description" content={description} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:url" content="https://theemmanuel.dev/work" />
+	<meta property="og:url" content="https://theemmanuel.dev/projects" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
 </svelte:head>
@@ -39,75 +77,101 @@
 <div class="animate-fade-in-up space-y-12">
 	<!-- Hero -->
 	<div class="space-y-4">
-		<h1 class="text-3xl font-bold tracking-tight md:text-5xl">Professional Journey</h1>
+		<h1 class="text-3xl font-bold tracking-tight md:text-5xl">
+			Selected <span class="text-(--primary)">Works</span>
+		</h1>
 		<p class="text-lg text-(--muted-foreground)">
-			Partnerships, projects, and platforms that have shaped my path.
+			SDKs, platforms, and tools I've architected and built—each designed to solve real problems and
+			create lasting value.
 		</p>
 	</div>
 
-	<!-- Timeline -->
-	<div
-		class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-linear-to-b before:from-transparent before:via-(--muted-foreground)/20 before:to-transparent md:before:mx-auto md:before:translate-x-0"
-	>
-		{#each experiences as xp, i}
+	<!-- Projects Grid -->
+	<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+		{#each projects as project}
 			<div
-				class="group relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse"
+				class="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-(--primary)/50 hover:shadow-xl"
 			>
-				<!-- Icon Dot -->
+				<!-- Gradient Overlay on Hover -->
 				<div
-					class="absolute top-0 left-0 flex h-10 w-10 shrink-0 transform items-center justify-center rounded-full border border-(--border) bg-(--background) shadow transition-all group-hover:scale-110 group-hover:border-(--primary) md:left-1/2 md:-translate-x-1/2"
-				>
-					<Briefcase size={16} class="text-(--primary)" />
+					class="absolute inset-0 bg-linear-to-br from-(--primary)/5 to-(--accent)/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+				></div>
+
+				<div class="relative z-10">
+					<div
+						class="mb-4 flex h-10 w-10 transform items-center justify-center rounded-full bg-(--primary)/10 text-(--primary) transition-all duration-300 group-hover:scale-110 group-hover:bg-(--primary) group-hover:text-(--primary-foreground)"
+					>
+						<Layers size={20} />
+					</div>
+
+					<h3
+						class="text-xl font-bold tracking-tight text-(--foreground) transition-colors group-hover:text-(--primary)"
+					>
+						{project.title}
+					</h3>
+					<p class="mt-1 text-sm font-medium text-(--accent)">
+						{project.tagline}
+					</p>
+					<p
+						class="mt-4 text-sm leading-relaxed text-(--muted-foreground) transition-colors duration-300 group-hover:text-(--foreground)"
+					>
+						{project.description}
+					</p>
+
+					{#if project.impact}
+						<p class="mt-3 text-xs font-semibold text-(--primary)">
+							{project.impact}
+						</p>
+					{/if}
 				</div>
 
-				<!-- Content Card -->
-				<div
-					class="ml-16 w-full pl-4 md:w-[calc(50%-2.5rem)] md:pl-0 md:group-odd:mr-auto md:group-odd:ml-0 md:group-even:mr-0 md:group-even:ml-auto"
-				>
-					<div
-						class="rounded-xl border border-(--border) bg-(--card) p-6 shadow-sm transition-all hover:border-(--primary)/50 hover:shadow-xl hover:-translate-y-1"
-					>
-						<div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-							<h3 class="text-xl font-bold text-(--foreground)">{xp.company}</h3>
+				<div class="relative z-10 mt-6">
+					<div class="flex flex-wrap gap-2 text-xs">
+						{#each project.tags as tag}
 							<span
-								class="inline-flex items-center rounded-full bg-(--secondary)/10 px-2.5 py-0.5 text-xs font-medium text-(--muted-foreground)"
+								class="rounded-full bg-(--secondary) px-3 py-1 font-medium text-(--secondary-foreground) transition-colors group-hover:bg-(--primary)/20 group-hover:text-(--primary)"
 							>
-								<Calendar size={12} class="mr-1" />
-								{xp.period}
+								{tag}
 							</span>
-						</div>
-						<p class="mt-1 text-sm font-medium text-(--primary)">{xp.role}</p>
-						<p class="mt-4 text-sm leading-relaxed text-(--muted-foreground)">
-							{xp.description}
-						</p>
+						{/each}
+					</div>
 
-						<div class="mt-4 flex flex-wrap gap-2">
-							{#each xp.stack as tech}
-								<span
-									class="inline-flex items-center rounded-md border border-(--border) bg-(--background) px-2 py-1 text-xs font-medium text-(--muted-foreground) transition-colors hover:text-(--foreground)"
+					{#if project.links && project.links.length > 0}
+						<div class="mt-4 flex gap-3">
+							{#each project.links as link}
+								<a
+									href={link.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-1 text-xs text-(--primary) hover:underline"
 								>
-									{tech}
-								</span>
+									{#if link.type === 'github'}
+										<Github size={14} />
+									{:else}
+										<ExternalLink size={14} />
+									{/if}
+									{link.label}
+								</a>
 							{/each}
 						</div>
-					</div>
+					{/if}
 				</div>
 			</div>
 		{/each}
 	</div>
 
 	<!-- CTA -->
-	<section class="text-center pt-8">
+	<section class="pt-8 text-center">
 		<div class="inline-flex flex-col items-center gap-4">
-			<p class="text-lg text-(--muted-foreground) max-w-2xl">
-				Ready to collaborate? I'm always open to partnerships where I can create meaningful impact.
-				Let's build something great together.
+			<p class="max-w-2xl text-lg text-(--muted-foreground)">
+				These are just highlights. I love diving deep into challenging problems and building
+				solutions that last. Want to see more or discuss a project?
 			</p>
 			<a
 				href="/contact"
-				class="inline-flex h-12 items-center justify-center rounded-full bg-(--accent) px-8 text-sm font-medium text-(--accent-foreground) shadow transition-all hover:opacity-90 hover:scale-105 focus:ring-2 focus:ring-(--ring) focus:outline-none"
+				class="inline-flex h-12 items-center justify-center rounded-full bg-(--accent) px-8 text-sm font-medium text-(--accent-foreground) shadow transition-all hover:scale-105 hover:opacity-90 focus:ring-2 focus:ring-(--ring) focus:outline-none"
 			>
-				Let's Connect
+				Let's Talk
 			</a>
 		</div>
 	</section>

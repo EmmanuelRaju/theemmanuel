@@ -43,8 +43,8 @@
 			</span>
 		</h1>
 		<p class="max-w-3xl text-xl text-(--muted-foreground) md:text-2xl">
-			Senior Frontend Developer partnering with teams to craft purpose-driven web applications using
-			React, SvelteKit, and modern JavaScript.
+			Senior Frontend Heavy Fullstack Developer partnering with teams to craft purpose-driven web
+			applications using React, SvelteKit, and modern JavaScript.
 		</p>
 	</div>
 
@@ -79,9 +79,9 @@
 					<p>
 						I believe the work we do can outlive us. That's why I love partnering on projects that
 						make a positive difference. My motivation comes from one of my favorite verses:
-						<span class="font-semibold text-(--primary)"
-							>"Whatever you do, work at it with all your heart, as working for the LORD."</span
-						>
+					</p>
+					<p class="font-semibold text-(--primary)">
+						"Whatever you do, work at it with all your heart, as working for the LORD."
 					</p>
 					<p>
 						I'm adaptable and always ready to upskill myself with tools and technologies that
